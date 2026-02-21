@@ -1,8 +1,44 @@
-🤖 C++ Machine Learning From ScratchA high-performance implementation of supervised learning algorithms—Linear Regression and Logistic Regression—built entirely in C++ without external ML libraries. This project demonstrates the implementation of gradient-based optimization, feature scaling, and regularization from first principles.🚀 OverviewThis repository contains a core ML engine capable of handling continuous value prediction and binary classification. By implementing these in C++, the project leverages efficient memory management and raw computational speed.🧠 Implemented Algorithms1. Linear RegressionDesigned for predicting continuous outcomes. It fits a linear relationship between input features and a target variable.Cost Function: Mean Squared Error (MSE).Optimization: Batch Gradient Descent.Goal: Minimize $J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)})^2$.2. Logistic Regression (Binary Classifier)Used for classification tasks, such as the included Heart Disease Prediction model.Activation: Sigmoid Function maps outputs to $(0, 1)$.Regularization: $L_2$ (Ridge) regularization implemented to prevent overfitting by penalizing large weights.Loss: Binary Cross-Entropy (Log-Loss).🛠 Technical Features⚖️ Feature StandardizationTo ensure stable convergence of Gradient Descent, the library includes a Z-Score Normalization module. This transforms features to have $\mu = 0$ and $\sigma = 1$, preventing features with large magnitudes from dominating the weight updates.📉 Optimization EngineStochastic/Mini-batch Logic: Iterative weight updates based on prediction error.Weight Decay: Integrated $\lambda$ parameter in the update rule:$$\theta_j := \theta_j - \alpha \left[ \frac{1}{m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)} + \frac{\lambda}{m}\theta_j \right]$$Bias Tracking: Independent intercept term $(\beta)$ optimization.📂 Project StructurePlaintext├── src/
-│   ├── log_reg.cpp      # Logistic Regression class & Sigmoid logic
-│   ├── lin_reg.cpp      # Linear Regression implementation
-│   └── csv.cpp          # Custom CSV parsing utility
-├── data/
-│   └── Heart_Disease_Prediction.csv
-└── main.cpp             # Model training and testing pipeline
-📊 Model Performance EvaluationThe suite provides real-time feedback during the training process:Loss Monitoring: Prints Binary Cross-Entropy or MSE at every epoch.Testing Pipeline: Slicing utilities to separate training data from test data to validate generalization.Normalization: Automatic calculation of mean and variance across dataset columns.
+# Machine Learning Algorithms from Scratch Using C++
+
+## Description
+This project implements a variety of machine learning algorithms from scratch using C++. It aims to provide a clear understanding of how these algorithms work under the hood, making it easier for learners and enthusiasts in machine learning.
+
+## Project Structure
+```
+/machine_learning_algorithms_from_scratch_using_cpp
+├── algorithms                  # Folder containing individual algorithms
+│   ├── linear_regression.cpp
+│   ├── logistic_regression.cpp
+│   ├── decision_tree.cpp
+├── tests                       # Folder containing unit tests for the algorithms
+├── examples                    # Example usages of the algorithms
+├── README.md                   # Project documentation
+└── main.cpp                    # Entry point for the application
+```
+
+## Features
+- Implementations of various algorithms including:
+  - Linear Regression
+  - Logistic Regression
+  - Decision Trees
+- Comprehensive unit tests to ensure the reliability of implementations
+- Example usages for better understanding
+
+## Usage Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/arch-666/machine_learning_algorithms_from_scratch_using_cpp.git
+   cd machine_learning_algorithms_from_scratch_using_cpp
+   ```
+
+2. Build the project (ensure you have a C++ compiler installed):
+   ```bash
+   g++ -o main main.cpp
+   ```
+
+3. Run the application:
+   ```bash
+   ./main
+   ```
+
+4. Explore the examples to understand how to implement the algorithms.
