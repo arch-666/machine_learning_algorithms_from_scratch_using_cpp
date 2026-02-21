@@ -14,22 +14,7 @@ This project provides implementations of various machine learning algorithms fro
 - Support Vector Machines
 - Neural Networks
 
-# Installation
-To install the necessary dependencies, run:
-```bash
-# Your installation commands here
-```
 
-# Usage Examples
-## Linear Regression
-```cpp
-// Example code for Linear Regression
-```
-
-## Logistic Regression
-```cpp
-// Example code for Logistic Regression
-```
 
 # Model Performance Evaluation
 Here are the metrics used to evaluate the performance of the models:
@@ -40,7 +25,6 @@ Here are the metrics used to evaluate the performance of the models:
 
 # File Descriptions
 - **README.md**: Documentation for this project.
-- **Main.cpp**: Entry point of the application.
 
 # Contribution Guidelines
 We welcome contributions from everyone! Please follow the guidelines below:
