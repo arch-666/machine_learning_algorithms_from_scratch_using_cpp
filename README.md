@@ -1,44 +1,78 @@
-# Machine Learning Algorithms from Scratch Using C++
+# Machine Learning Algorithms from Scratch in C++
 
-## Description
-This project implements a variety of machine learning algorithms from scratch using C++. It aims to provide a clear understanding of how these algorithms work under the hood, making it easier for learners and enthusiasts in machine learning.
+## Project Overview
+This project provides a collection of machine learning algorithms implemented from scratch using C++. The aim is to help learners understand the underlying principles of various algorithms and to facilitate their implementation in a high-performance programming environment.
+
+## Features
+- Simple and clear implementations of machine learning algorithms
+- Convenient API for easy integration
+- Well-documented code for educational purposes
+- Comprehensive examples for each algorithm
+
+## Algorithms Implemented
+- Linear Regression
+- Logistic Regression
+- Decision Trees
+- Random Forest
+- K-Means Clustering
+- Support Vector Machines (SVM)
 
 ## Project Structure
 ```
-/machine_learning_algorithms_from_scratch_using_cpp
-├── algorithms                  # Folder containing individual algorithms
-│   ├── linear_regression.cpp
-│   ├── logistic_regression.cpp
-│   ├── decision_tree.cpp
-├── tests                       # Folder containing unit tests for the algorithms
-├── examples                    # Example usages of the algorithms
-├── README.md                   # Project documentation
-└── main.cpp                    # Entry point for the application
+├── include/                # Header files
+│   └── (header files)
+├── src/                   # Source files
+│   └── (source code)
+├── examples/              # Example usage of each algorithm
+│   └── (example files)
+├── tests/                 # Unit tests for validation
+│   └── (test files)
+├── README.md              # Project documentation
+└── Makefile               # Build configuration
 ```
 
-## Features
-- Implementations of various algorithms including:
-  - Linear Regression
-  - Logistic Regression
-  - Decision Trees
-- Comprehensive unit tests to ensure the reliability of implementations
-- Example usages for better understanding
-
-## Usage Instructions
-1. Clone the repository:
-   ```bash
+## Installation Instructions
+1. Clone this repository:
+   ```
    git clone https://github.com/arch-666/machine_learning_algorithms_from_scratch_using_cpp.git
+   ```
+2. Navigate to the project directory:
+   ```
    cd machine_learning_algorithms_from_scratch_using_cpp
    ```
+3. Run `make` to build the project.
 
-2. Build the project (ensure you have a C++ compiler installed):
-   ```bash
-   g++ -o main main.cpp
-   ```
+## Usage Examples
+- To use Linear Regression:
+  ```cpp
+  #include "linear_regression.h"
+  // Create a Linear Regression object
+  LinearRegression lr;
+  // Load your data, fit the model, etc.
+  ```
 
-3. Run the application:
-   ```bash
-   ./main
-   ```
+## Model Performance Evaluation
+After training, evaluate your model using metrics such as accuracy, precision, recall, F1 score, etc. Example for evaluation:
+```cpp
+// Assuming you have predictions and true labels
+float accuracy = calculateAccuracy(predictions, true_labels);
+```
 
-4. Explore the examples to understand how to implement the algorithms.
+## File Descriptions
+- `linear_regression.h`: Header file for linear regression algorithm.
+- `linear_regression.cpp`: Implementation file for linear regression.
+- `Makefile`: Contains build instructions.
+
+## Contribution Guidelines
+We welcome contributions to enhance the functionality and performance of this project. Please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`feature/your-feature`).
+3. Make your changes and commit them.
+4. Push your branch.
+5. Open a Pull Request describing your changes.
+
+Your contributions are greatly appreciated!
+
+---
+
+Thank you for your interest in this project! If you have any questions, feel free to reach out.
